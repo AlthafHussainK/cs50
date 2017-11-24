@@ -13,52 +13,54 @@
  */
 bool search(int value, int values[], int n)
 {
-    // TODO: implement a searching algorithm
+    // searching algorithm
     if(n < 1)
     {
         return false;
     }
-    int start = 0, end = 0, middle;
+
+    //int t = 0;
+    int start = 0, end = n-1, middle;
     while(start <= end)
     {
+
         middle = (start + end) / 2;
         if(values[middle] == value)
         {
             return true;
-            exit(1);
+            exit(0);
         }
-        else
-        {
-            if(item > values[middle])
+        else if(value > values[middle])
                 start = middle + 1;
-            else
+        else
                 end = middle - 1;
-        }
+
     }
-    if(start > end)
-        return false;
+    return false;
+
 
 }
 
 /**
  * Sorts array of n values.
  */
+
 void swap(int *x, int *y)
  {
    int temp = *x;
    *x = *y;
    *y = temp;
  }
- 
+
 void sort(int values[], int n)
 {
-    // TODO: implement a sorting algorithm
-    int i, j;
+    // sorting algorithm
+    int i;
     for(i = 0; i < n-1; i++)
     {
       for(int j = 0; j < n-1 - i; j++)
-        if(array[j] > array[j+1])
-          swap(&array[j], &array[j+1]);
+        if(values[j] > values[j+1])
+          swap(&values[j], &values[j+1]);
     }
-    return 0;
+
 }
