@@ -41,7 +41,7 @@ int main(int argc, string argv[])
         srand48((long) time(NULL));
     }
 
-    // printing n number of random numbers using drand48() 
+    // printing n number of random numbers using drand48()
     for (int i = 0; i < n; i++)
     {
         printf("%i\n", (int) (drand48() * LIMIT));
