@@ -1,7 +1,6 @@
 /**
  * Copies a BMP piece by piece, just because.
  */
-
 #include <stdio.h>
 #include <stdlib.h>
 
